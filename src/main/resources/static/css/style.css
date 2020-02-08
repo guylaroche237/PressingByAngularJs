@@ -1,0 +1,74 @@
+nav{
+	background-color: #1E4A4A;
+}
+.decal{
+	padding: 10px;
+}
+#carousel-example-2{
+	height: 10%;
+}
+.view{
+	height: 10%;
+}
+.card{
+	padding: 10px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+.services{
+	
+	
+}
+.pano,#liste{
+	border: 1px black solid;
+	margin: 10px;
+	padding: 20px;
+}
+.error{
+	color:red;
+}
+
+
+.temoi{
+	text-align: center;
+}
+#temoignage,listescl{
+	/* background-color:#C1C9C9; */
+	margin-top: 50px;
+	
+}
+
+
+#exTab1 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+#exTab2 h3 {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+  border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  color : white;
+  background-color: #428bca;
+  padding : 5px 15px;
+}
+
+
+
+

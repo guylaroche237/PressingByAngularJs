@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- META -->
+
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Formation AngularJS">
+<meta name="author" content="Serge Tah�">
+
+<!-- CSS -->
+
+
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/css-hamburgers/hamburgers.min.css">
+
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="vendor/daterangepicker/daterangepicker.css">
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<link href="bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/snipet.css" rel="stylesheet">
+
+<!-- <link href="css/font-awosomes.css" rel="stylesheet"> -->
+<link href="font-awesome-4/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>AngularJS</title>
+</head>
+<body ng-app="myapp" ng-controller="conect">
+
+	<div class="">
+
+		<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+			<div class="navbar-header d-flex col">
+				<a class="navbar-brand" href="#">BOBO<b>Pressing</b></a>
+				<button type="button" data-target="#navbarCollapse"
+					data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+					<span class="navbar-toggler-icon"></span> <span class="icon-bar"></span>
+					<span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- Collection of nav links, forms, and other content for toggling -->
+			<div id="navbarCollapse"
+				class="collapse navbar-collapse justify-content-start">
+				<ul class="nav navbar-nav">
+					<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+					<li class="nav-item dropdown"><a data-toggle="dropdown"
+						class="nav-link dropdown-toggle" href="#">Nos Services <b
+							class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" class="dropdown-item">Web Design</a></li>
+							<li><a href="#" class="dropdown-item">Web Development</a></li>
+							<li><a href="#" class="dropdown-item">Graphic Design</a></li>
+							<li><a href="#" class="dropdown-item">Digital Marketing</a></li>
+						</ul></li>
+					<li class="nav-item active"><a href="#" class="nav-link">Pricing</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+				</ul>
+				<form class="navbar-form form-inline">
+					<div class="input-group search-box">
+						<input type="text" id="search" class="form-control"
+							placeholder="Search here...">
+						<button class="btn btn-default">
+							<i class="fa fa-search"></i>
+						</button>
+
+					</div>
+				</form>
+				<ul class="nav navbar-nav navbar-right ml-auto">
+					<li class="nav-item"><a data-toggle="dropdown"
+						ng-click="login()" class="nav-link dropdown-toggle" href="#"
+						aria-expanded="false">Login</a></li>
+					<li class="nav-item"><a href="#" data-toggle="dropdown"
+						ng-click="new()"
+						class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
+						aria-expanded="false">Sign up</a></li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<div id="carousel-example-2" class="carousel slide carousel-fade"
+			data-ride="carousel">
+			<!--Indicators-->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-2" data-slide-to="0"
+					class="active"></li>
+				<li data-target="#carousel-example-2" data-slide-to="1"></li>
+				<li data-target="#carousel-example-2" data-slide-to="2"></li>
+			</ol>
+			<!--/.Indicators-->
+			<!--Slides-->
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<div class="view">
+						<img class="d-block w-100" src="images/img3.png" alt="First slide">
+						<div class="mask rgba-black-light"></div>
+					</div>
+					<div class="carousel-caption">
+						<h3 class="h3-responsive">Ouvert Tous Les Jours 7j/7</h3>
+						<p>Service Acceuillant</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<!--Mask color-->
+					<div class="view">
+						<img class="d-block w-100" src="images/liv.png" alt="Second slide">
+						<div class="mask rgba-black-strong"></div>
+					</div>
+					<div class="carousel-caption">
+						<h3 class="h3-responsive">Livraison A Domiclile</h3>
+						<p>Ne vous Deplacer Pas</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<!--Mask color-->
+					<div class="view">
+						<img class="d-block w-100" src="images/img.png" alt="Third slide">
+						<div class="mask rgba-black-slight"></div>
+					</div>
+					<div class="carousel-caption">
+						<h3 class="h3-responsive">Machine De Derniere Pointe</h3>
+						<p>Ne vous Inquieter Plus</p>
+					</div>
+				</div>
+			</div>
+			<!--/.Slides-->
+			<!--Controls-->
+			<a class="carousel-control-prev" href="#carousel-example-2"
+				role="button" data-slide="prev"> <span
+				class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+				class="sr-only">Previous</span>
+			</a> <a class="carousel-control-next" href="#carousel-example-2"
+				role="button" data-slide="next"> <span
+				class="carousel-control-next-icon" aria-hidden="true"></span> <span
+				class="sr-only">Next</span>
+			</a>
+			<!--/.Controls-->
+		</div>
+	</div>
+
+
+
+
+	<!--  CAROUSEL DE LA PAGE -->
+
+	<!--Carousel Wrapper-->
+
+	<!--/.Carousel Wrapper-->
+	<!--  FIN CAROUSEL  -->
+	<div class="container">
+		<div class="row">
+
+			<div class="col-lg-4 pano" ng-show="panellogin">
+				<form name="myform">
+					<p class="hint-text decal">
+					<center>Entrez Vos Identifiants</center>
+					</p>
+					<p>
+					<center style="color: #0733E6">{{message}}</center>
+					</p>
+					<div class="form-group social-btn clearfix decal">
+						<a href="#" class="btn btn-primary pull-left"><i
+							class="fa fa-facebook"></i> Facebook</a> <a href="#"
+							class="btn btn-info pull-right"><i class="fa fa-twitter"></i>
+							Twitter</a>
+					</div>
+					<div class="or-seperator center center-block">
+						<center>
+							<h1>or</h1>
+						</center>
+					</div>
+					<div class="form-group decal">
+						<input type="text" ng-model="nom" name="nom" class="form-control"
+							placeholder="Your Name" ng-required="true">
+						<p class="error"
+							ng-show="myform.nom.$invalid && myform.nom.$touched">Nom
+							Invalide</p>
+					</div>
+					<div class="form-group decal">
+						<input ng-model="tel" name="tel" type="number"
+							class="form-control" placeholder="Number phone"
+							ng-required="true">
+						<p class="error"
+							ng-show="myform.tel.$touched && myform.tel.$invalid">Tel
+							Invalide</p>
+					</div>
+					<div class="form-group decal">
+						<button class="btn btn-primary btn-lg"
+							ng-disabled="myform.$invalid" ng-click="valider()">
+							Login</button>
+						<button class="btn btn-danger btn-lg">Cancel</button>
+					</div>
+
+
+					<div class="form-footer decal">
+						<a href="">Forgot Your password?</a>
+					</div>
+				</form>
+
+			</div>
+
+			<div class="col-lg-4 pano" ng-show="panelnew">
+
+				<form name="form">
+					<p class="hint-text decal">
+					<center>Creer Votre Nouveau Compte</center>
+					</p>
+
+					<div class="form-group decal">
+						<input type="text" name="username" ng-model="nom"
+							class="form-control" placeholder="Nom.." ng-required="true">
+						<p class="error"
+							ng-show="form.username.$invalid && form.username.$touched">Nom
+							incorecte</p>
+					</div>
+					<div class="form-group decal">
+						<input type="number" name="tel" ng-model="tel"
+							class="form-control" placeholder="Telephone.." ng-required="true">
+						<p class="error" ng-show="form.tel.$invalid && form.tel.$touched">
+							Telephone Incorecte</p>
+					</div>
+					<div class="form-group decal">
+						<input type="email" name="email" ng-model="email"
+							class="form-control" placeholder="Email..." ng-required="true">
+						<p class="error"
+							ng-show="form.email.$invalid && form.email.$touched">
+							<span>Your email is invalid</span>
+						</p>
+					</div>
+
+					<div class="form-group decal">
+						<input type="text" name="adresse" ng-model="adresse"
+							class="form-control" placeholder="Adresse..." ng-required="true">
+						<p class="error"
+							ng-show="form.adresse.$invalid && form.adresse.$touched">
+							Adrese Incorecte</p>
+					</div>
+					<div class="form-group decal">
+						<label class="checkbox-inline"><input type="checkbox"
+							ng-required="true"> I accept the <a href="#">Terms
+								&amp; Conditions</a></label>
+					</div>
+
+					<div class="form-group decal">
+						<button class="btn btn-primary btn-lg" ng-click="SaveUser()"
+							ng-disabled="form.$invalid">Save</button>
+						<button class="btn btn-danger btn-lg">Cancel</button>
+
+					</div>
+
+				</form>
+
+
+			</div>
+
+			<div class="col-lg-12" ng-show="acceuil">
+
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item"><a class="nav-link active" id="home-tab"
+						data-toggle="tab" href="#home" role="tab" aria-controls="home"
+						aria-selected="true">Home</a></li>
+					<li class="nav-item"><a class="nav-link" id="profile-tab"
+						data-toggle="tab" href="#profile" role="tab"
+						aria-controls="profile" aria-selected="false">Profile</a></li>
+					<li class="nav-item"><a class="nav-link" id="contact-tab"
+						data-toggle="tab" href="#contact" role="tab"
+						aria-controls="contact" aria-selected="false">Contact</a></li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="home" role="tabpanel"
+						aria-labelledby="home-tab">
+						<div class="pano">
+							<div class="row">
+								<div class="col-lg-8">
+
+									<table class="table">
+										<thead class="thead-dark">
+											<tr>
+												<th scope="col">ID</th>
+												<th scope="col">QUANTITE</th>
+												<th scope="col">PROUDUIT</th>
+												<th scope="col">Prix_UNITAIRE</th>
+												<th scope="col">SOMME</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr ng-repeat="elt in tab">
+												<td>{{elt.id_cmd}}</td>
+												<td>{{elt.qte}}</td>
+												<td>{{elt.categorie}}</td>
+												<td>{{elt.prix}}</td>
+												<td>{{elt.total}}</td>
+												<td><button class="btn btn-success"
+												        
+														ng-click="aficher(elt.id_cmd,elt.qte,elt.categorie)">UPDATE</button>
+													<button class="btn btn-danger" ng-click="del(elt.id_cmd)">DELETE</button></td>
+											</tr>
+
+										</tbody>
+									</table>
+
+									<div class="form-group">
+										<button class="btn btn-primary" ng-click="addcmd()">Ajouter une Commande</button>
+										<button class="btn btn-success" ng-click="saveFacture()">Valider Votre Facture</button>
+										
+									</div>
+								</div>
+								
+								<div class="col-lg-4" ng-show="panel_cmd">
+									<form>
+										<div class="form-group">
+											<label>Nom Produit</label> <select class="form-control" ng-model="choix">
+												<option ng-repeat="item in produits" ng-value="item.categorie">{{item.categorie}}</option>
+											</select>
+										</div>
+
+
+										<div class="form-group">
+											<label>Quantite</label> <input class="form-control"
+												type="number" ng-change="getProduitByCat()" ng-model="qte">
+
+										</div>
+
+
+										<button class="btn btn-primary" ng-click="saveProduit()">Save</button>
+										<button class="btn btn-danger" ng-click="cancelCMD()">Cancel</button>
+									</form>
+
+								</div>
+								
+								 <div class="col-lg-4" ng-show="cadre_update">
+									<form>
+										<div class="form-group">
+											<label>Nom Produit</label> <select class="form-control"
+												ng-model="categorie">
+												<option ng-repeat="elt in produits" ng-value="cate">{{elt.categorie}}</option>
+											</select>
+										</div>
+
+
+										<div class="form-group">
+											<label>Quantite</label> <input class="form-control"
+												type="number" ng-model="qtecme">
+
+										</div>
+
+
+										<button class="btn btn-primary" ng-click="updateProduit()">UPDATE</button>
+										<button class="btn btn-danger" ng-click="cancelCMD()">Cancel</button>
+									</form>
+
+								</div> 
+
+
+							</div>
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+					<div class="tab-pane fade" id="profile" role="tabpanel"
+						aria-labelledby="profile-tab">element 2</div>
+					<div class="tab-pane fade" id="contact" role="tabpanel"
+						aria-labelledby="contact-tab">element 3</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+	<!--  CONTACTER NOUS ENVOYEZ NOUS UN EMAIL -->
+
+
+
+
+ <div class="container-contact100 formct">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Send Us A Message
+				</span>
+
+
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<label class="label-input100" for="name">Full name</label>
+					<input id="name" class="input100" type="text" name="name" placeholder="Enter your name...">
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<label class="label-input100" for="email">Email Address</label>
+					<input id="email" class="input100" type="text" name="email" placeholder="Enter your email...">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<div class="label-input100">What do you need?</div>
+					<div>
+						<select class="js-select2" name="service">
+							<option>Please chooses</option>
+							<option>UI/UX Design</option>
+							<option>eCommerce Bussiness</option>
+							<option>Online Services</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<label class="label-input100" for="message">Message</label>
+					<textarea id="message" class="input100" name="message" placeholder="Type your message here..."></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						Send
+					</button>
+				</div>
+
+				<div class="contact100-form-social flex-c-m">
+					<a href="#" class="contact100-form-social-item flex-c-m bg1 m-r-5">
+						<i class="fa fa-facebook-f" aria-hidden="true"></i>
+					</a>
+
+					<a href="#" class="contact100-form-social-item flex-c-m bg2 m-r-5">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+
+					<a href="#" class="contact100-form-social-item flex-c-m bg3">
+						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+					</a>
+				</div>
+			</form>
+
+			<div  class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+			</div>
+		</div>
+	</div>
+
+
+
+<!-- <footer class="container-fluid" style="height: 120px">
+	  <div class="row">
+	    <span ><a>A Propos de BOBOPressing</a></span> |  <span ><a>Regle de Confidentialite</a></span> |  <span ><a>Condition d'Utilisation du Site</a></span> |  <span ><a>Offre D'emplois</a></span>
+	  </div>
+	
+</footer> -->
+
+
+	<!-- Bootstrap Javascript -->
+
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript"
+		src="bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+	<!-- AngularJS -->
+
+	<script type="text/javascript" src="angular/angular.min.js"></script>
+
+	<script type="text/javascript" src="angular/angular-route.min.js"></script>
+	<!-- <script type="text/javascript" src="js/nav2.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+ -->
+	<script type="text/javascript" src="js/slick-1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/snipet.js"></script>
+
+	<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/myapp1.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function() {
+			$(this).select2({
+				minimumResultsForSearch : 20,
+				dropdownParent : $(this).next('.dropDownSelect2')
+			});
+		})
+		$(".js-select2").each(function() {
+			$(this).on('select2:open', function(e) {
+				$(this).parent().next().addClass('eff-focus-selection');
+			});
+		});
+		$(".js-select2").each(function() {
+			$(this).on('select2:close', function(e) {
+				$(this).parent().next().removeClass('eff-focus-selection');
+			});
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script> -->
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+</html>
